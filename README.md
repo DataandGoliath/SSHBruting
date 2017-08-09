@@ -1,2 +1,4 @@
 # SSHBruting
-Tools to crack SSH. Tools I didn't code will be listed in the readme, with credits if I remember the author.
+TOOLS:
+  SSHate - A simple SSH bruter in Python, which employs a wordlist.
+  DroidSSHate - A version I coded for Android.
