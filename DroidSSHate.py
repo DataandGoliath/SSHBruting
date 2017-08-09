@@ -1,5 +1,5 @@
 try:
-	import paramiko, os sys, socket
+	import paramiko, os, sys, socket
 except:
 	import os
 	print("Dependancies: paramiko, os, sys, socket.")
