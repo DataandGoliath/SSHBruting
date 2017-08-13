@@ -1,5 +1,5 @@
-try:
-	import paramiko, os sys, socket
+
+	import paramiko, os, sys, socket
 except:
 	import os
 	print("Dependancies: paramiko, os, sys, socket.")
@@ -20,17 +20,17 @@ if "-h" in sys.argv[1:]:
 	name = name.replace("['","")
 	name = name.replace("']","")
 	print(name+" -h = Display this menu and exit.")
-	print(name+" -v = Verbose mode. Display failed authentication and authentication attempts")
+	print(name+" -q = Quiet mode. Display only successful authentication attempts")
 	print(name+" -e = Exit on first valid credential pair.")
-	print(name+" -d = Debug mode. Display response codes. Best used with -v")
+	print(name+" -d = Debug mode. Display response codes. Best used without -q")
 	print("\n All of the above except -h can be used with eachother")
 	print("Example: \n"+name+" -v -d")
 	print("or \n"+name+" -e -v")
 	exit()
-if "-v" in sys.argv[1:]:
-	Verbose = True
-else:
+if "-q" in sys.argv[1:]:
 	Verbose = False
+else:
+	Verbose = True
 if "-d" in sys.argv[1:]:
 	Debug = True
 else:
